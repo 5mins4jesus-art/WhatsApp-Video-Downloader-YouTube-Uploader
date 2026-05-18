@@ -1,0 +1,64 @@
+# ─── Secrets & credentials ────────────────────────────────────────────
+youtube_client_secret.json
+youtube_oauth_token.json
+*client_secret*.json
+*oauth*token*.json
+*.pem
+*.key
+*.crt
+credentials.json
+service-account*.json
+
+# Environment / dotfiles with secrets
+.env
+.env.*
+!.env.example
+
+# Auth caches / browser profiles
+.local/share/mudslide/
+.wwebjs_auth/
+.wwebjs_cache/
+playwright-user-data/
+chrome-profile/
+.playwright-youtube-auth
+
+# ─── Downloaded & generated media ─────────────────────────────────────
+downloaded_videos/
+downloaded_images/
+combined_day_videos/
+watch_debug/
+youtube_post_queue/
+# ─── Metadata & runtime state ─────────────────────────────────────────
+video_metadata.json
+image_metadata.json
+upload_log*.json
+combined_upload_log.json
+youtube_post_log.json
+
+# ─── Logs ─────────────────────────────────────────────────────────────
+*.log
+logs/
+pipeline*.log
+
+# ─── Dependencies / libraries ─────────────────────────────────────────
+node_modules/
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+.pnpm-store/
+.npm/
+.yarn/
+dist/
+build/
+
+# ─── Editor / OS cruft ────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+*~

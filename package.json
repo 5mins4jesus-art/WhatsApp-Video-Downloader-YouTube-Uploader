@@ -1,0 +1,42 @@
+{
+  "name": "workspace",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "main": "node main_pipeline.mjs",
+    "auth:whatsapp": "node check_whatsapp_wwebjs_auth.mjs",
+    "auth:youtube": "node check_youtube_auth.mjs",
+    "combine:day": "node main_pipeline.mjs --combine-only",
+    "youtube:dedupe": "node dedupe_youtube_videos.mjs",
+    "history:wwebjs": "node list_historic_messages_wwebjs.mjs",
+    "pipeline:wwebjs": "node download_and_upload_wwebjs.mjs",
+    "youtube:rename": "node rename_youtube_videos.mjs",
+    "images:wwebjs": "node download_and_post_images_wwebjs.mjs",
+    "images:queue": "node process_image_post_queue.mjs --next",
+    "images:queue:retry": "node process_image_post_queue.mjs --next --include-retry",
+    "images:post": "node post_youtube_images_playwright.mjs --next",
+    "images:verify": "node verify_youtube_image_posts.mjs",
+    "images:reconcile": "node reconcile_youtube_image_posts.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@whiskeysockets/baileys": "^7.0.0-rc.9",
+    "googleapis": "^171.4.0",
+    "mudslide": "^0.34.0",
+    "open": "^11.0.0",
+    "pino": "^10.3.1",
+    "playwright": "^1.59.1",
+    "qrcode-terminal": "^0.12.0",
+    "whatsapp-web.js": "^1.34.7"
+  },
+  "overrides": {
+    "protobufjs": "^7.5.5"
+  }
+}
